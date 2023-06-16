@@ -15,7 +15,7 @@ const Welcome = () => {
       }
       checkSession()
     }, [])
-    
+    console.log(successUrl)
     async function createSession(){
         account.createOAuth2Session('google' ,successUrl , failureUrl);
     }
