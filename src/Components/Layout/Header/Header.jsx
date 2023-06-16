@@ -39,7 +39,7 @@ navigate('/')
         <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
         <h2>Ophelia</h2>
       </Group>
-      <Button radius="xl" h={30} color='red' onClick={()=>{logout}>
+      <Button radius="xl" h={30} color='red' onClick={()=>{logout}}>
         Logout
       </Button>
     </Container>
