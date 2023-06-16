@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
 import { account } from '../../Services/Appwrite/AppwriteConfig';
 import { useNavigate } from 'react-router-dom';
+import WelcomeHero from '../../Components/Welcome/WelcomeHero';
 
-const successUrl = import.meta.env.VITE_SUCCESS_URL
-const failureUrl = import.meta.env.VITE_FAILURE_URL
 const Welcome = () => {
     const navigate = useNavigate()
     useEffect(() => {
@@ -15,14 +14,8 @@ const Welcome = () => {
       }
       checkSession()
     }, [])
-    console.log(successUrl)
-    async function createSession(){
-        account.createOAuth2Session('google' ,successUrl , failureUrl);
-    }
   return (
-    <div onClick={()=>createSession()}>
-       Click to Login
-    </div>
+    <WelcomeHero />
   )
 }
 

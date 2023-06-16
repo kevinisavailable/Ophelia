@@ -15,7 +15,7 @@ const DashboardComponent = () => {
   return (
     <div>
         <DashboardWelcome />
-        {id && ( <DashboardCredentialsData id={id}/>)}
+        {id ?  ( <DashboardCredentialsData id={id}/>) : (<><h3>Add a new Credential <br /> Or Click on the existing credential to view</h3></>)}
     </div>
   )
 }
