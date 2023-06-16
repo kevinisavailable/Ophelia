@@ -24,9 +24,10 @@ const HeaderComponent = ({isImageUploaded}) => {
     getUser()
   }, [])
 
-async function logout(){
-await account.deleteSession('current')
-navigate('/')
+
+const logout = async()=> {
+  await account.deleteSession('current')
+  navigate('/')
 }
     const HEADER_HEIGHT = rem(60);
     const { classes } = useHeaderStyles();
@@ -39,7 +40,7 @@ navigate('/')
         <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
         <h2>Ophelia</h2>
       </Group>
-      <Button radius="xl" h={30} color='red' onClick={()=>{logout}}>
+      <Button radius="xl" h={30} color='red' onClick={logout}>
         Logout
       </Button>
     </Container>
